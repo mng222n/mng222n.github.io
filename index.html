@@ -57,9 +57,9 @@ body {font-family: "Lato", sans-serif;}
 <p>Click on the buttons inside the tabbed menu:</p>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Articles')" id="defaultOpen">Articles</button>
-  <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button>
-  <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+  <button class="tablinks" onclick="openEntry(event, 'Articles')" id="defaultOpen">Articles</button>
+  <button class="tablinks" onclick="openEntry(event, 'Portfolio')">Portfolio</button>
+  <button class="tablinks" onclick="openEntry(event, 'About')">About</button>
 </div>
 
 <div id="Articles" class="tabcontent">
@@ -78,7 +78,7 @@ body {font-family: "Lato", sans-serif;}
 </div>
 
 <script>
-function openCity(evt, cityName) {
+function openEntry(evt, entryName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -88,7 +88,7 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(entryName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 
